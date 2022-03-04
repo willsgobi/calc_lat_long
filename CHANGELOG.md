@@ -1,3 +1,11 @@
 ## [1.0.0]
 
 * Initial release
+
+## [1.0.1]
+
+* Adjusts in README
+
+## [1.0.2]
+
+* Change target version in doc
