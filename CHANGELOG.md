@@ -9,3 +9,7 @@
 ## [1.0.2]
 
 * Change target version in doc
+
+## [1.0.3]
+
+* Adding information in doc abour Unit of return after calculate

@@ -1,6 +1,6 @@
 # calc_lat_long
 
-A package to calculate distance between two cordinate points Latitude and Longitude.
+A package to calculate distance between two cordinate points Latitude and Longitude by Miles or Nautical Miles or Kilometers.
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ A package to calculate distance between two cordinate points Latitude and Longit
 
 ```yaml
 depencencies:
-    calc_lat_lon: ^1.0.2
+    calc_lat_lon: ^1.0.3
 ```
 
 ## Example
