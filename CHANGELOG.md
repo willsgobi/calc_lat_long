@@ -13,3 +13,7 @@
 ## [1.0.3]
 
 * Adding information in doc abour Unit of return after calculate
+
+## [1.0.4]
+
+* Adding the same information below in the pubspec
