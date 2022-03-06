@@ -8,7 +8,7 @@ A package to calculate distance between two cordinate points Latitude and Longit
 
 ```yaml
 depencencies:
-  calc_lat_lon: ^1.0.5
+  calc_lat_long: ^1.0.7
 ```
 
 ## Example
@@ -19,10 +19,6 @@ There are a number of properties that you can modify:
 - Longitude1
 - Latitude2
 - Longitude2
-
-```dart
-  /// Here you will use the UnitLength Enum, passing one of three options
-```
 
 - Enum UnitLength.km [mi, km, nm] (miles, kilometers, nautical miles)
 

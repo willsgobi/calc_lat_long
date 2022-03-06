@@ -18,10 +18,10 @@ packages:
   calc_lat_long:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
-    version: "1.0.5"
+      name: calc_lat_long
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.6"
   characters:
     dependency: transitive
     description:

@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -77,8 +77,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text(dropDownStringItem.toString()),
                     );
                   }).toList(),
-                  onChanged: (UnitLength newUnitSelected) {
-                    _dropDownItemSelected(newUnitSelected);
+                  onChanged: (UnitLength? newUnitSelected) {
+                    _dropDownItemSelected(newUnitSelected!);
                     setState(() {
                       _selectedUnit = newUnitSelected;
                     });
@@ -90,10 +90,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ElevatedButton(
                   onPressed: () {
                     var dist = CalcDistance.distance(
-                        num.parse(latitude1.text),
-                        num.parse(latitude2.text),
-                        num.parse(longitude1.text),
-                        num.parse(longitude2.text),
+                        double.parse(latitude1.text),
+                        double.parse(latitude2.text),
+                        double.parse(longitude1.text),
+                        double.parse(longitude2.text),
                         _selectedUnit);
 
                     setState(() {

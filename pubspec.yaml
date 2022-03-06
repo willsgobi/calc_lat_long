@@ -1,10 +1,10 @@
 name: calc_lat_long
 description: A package to calculate distance between two cordinate points Latitude and Longitude by Miles or Nautical Miles or Kilometers.
-version: 1.0.5
+version: 1.0.7
 homepage: https://github.com/willsgobi/calc_lat_long
 
 environment:
-  sdk: '>=2.7.0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
   flutter: '>=1.17.0'
 
 dependencies:

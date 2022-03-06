@@ -21,3 +21,11 @@
 ## [1.0.5]
 
 - Upgrading to null safety
+
+## [1.0.6]
+
+- Adjust dart version in pubspec
+
+## [1.0.7]
+
+- Adjust in example to null safety
