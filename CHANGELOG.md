@@ -1,19 +1,23 @@
 ## [1.0.0]
 
-* Initial release
+- Initial release
 
 ## [1.0.1]
 
-* Adjusts in README
+- Adjusts in README
 
 ## [1.0.2]
 
-* Change target version in doc
+- Change target version in doc
 
 ## [1.0.3]
 
-* Adding information in doc abour Unit of return after calculate
+- Adding information in doc abour Unit of return after calculate
 
 ## [1.0.4]
 
-* Adding the same information below in the pubspec
+- Adding the same information below in the pubspec
+
+## [1.0.5]
+
+- Upgrading to null safety

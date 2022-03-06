@@ -8,16 +8,22 @@ A package to calculate distance between two cordinate points Latitude and Longit
 
 ```yaml
 depencencies:
-    calc_lat_lon: ^1.0.4
+  calc_lat_lon: ^1.0.5
 ```
 
 ## Example
 
 There are a number of properties that you can modify:
+
 - Latitude1
 - Longitude1
 - Latitude2
 - Longitude2
+
+```dart
+  /// Here you will use the UnitLength Enum, passing one of three options
+```
+
 - Enum UnitLength.km [mi, km, nm] (miles, kilometers, nautical miles)
 
 <hr>
@@ -68,6 +74,7 @@ Widget build(BuildContext context) {
             ),
             ElevatedButton(
                 onPressed: () {
+                  /// Here you must pass your coordinates following by Latitude 1, Latitude 2, Logintude 1, Longitude 2
                   var dist = CalcDistance.distance(
                       num.parse(latitude1.text),
                       num.parse(latitude2.text),
@@ -86,12 +93,7 @@ Widget build(BuildContext context) {
             Text(distance == 0 ? "" : "Distance: $distance")
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: null,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
+      )
     );
   }
 ```
