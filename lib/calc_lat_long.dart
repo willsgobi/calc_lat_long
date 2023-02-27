@@ -1,41 +1,56 @@
 library calc_lat_long;
 
-import 'dart:math' as math;
+import 'dart:math';
 
 import 'UnitLengthEnum.dart';
-
 export 'UnitLengthEnum.dart';
 
 class CalcDistance {
-  static distance(double lat1, double lat2, double lon1, double lon2,
+  static double distance(double lat1, double lat2, double lon1, double lon2,
       UnitLength unitLength) {
     if ((lat1 == lat2) && (lon1 == lon2)) {
       return 0;
     } else {
-      var radLat1 = math.pi * lat1 / 180;
-      var radLat2 = math.pi * lat2 / 180;
-      var theta = lon1 - lon2;
-      var radTheta = math.pi * theta / 180;
-      var dist = math.sin(radLat1) * math.sin(radLat2) +
-          math.cos(radLat1) * math.cos(radLat2) * math.cos(radTheta);
+      double converterFactor;
 
-      if (dist > 1) {
-        dist = 1;
+      switch (unitLength) {
+        case UnitLength.km:
+          converterFactor = 1.0 / 1000.0;
+          break;
+        case UnitLength.mi:
+          converterFactor = 1.0 / 1609.34;
+          break;
+        case UnitLength.nm:
+          converterFactor = 1.0 / 1852.0;
+          break;
+        default:
+          converterFactor = 1.0;
+          break;
       }
 
-      dist = math.acos(dist);
-      dist = dist * 180 / math.pi;
-      dist = dist * 60 * 1.1515;
+      const earthRadius = 6371000;
 
-      if (unitLength == UnitLength.km) {
-        dist = (dist * 1.609344);
-      }
+      final lat1Rad = radians(lat1);
+      final lon1Rad = radians(lon1);
+      final lat2Rad = radians(lat2);
+      final lon2Rad = radians(lon2);
 
-      if (unitLength == UnitLength.nm) {
-        dist = (dist * 0.8684);
-      }
+      final deltaLat = lat2Rad - lat1Rad;
+      final deltaLon = lon2Rad - lon1Rad;
 
-      return double.parse(dist.toStringAsFixed(2));
+      final a = sin(deltaLat / 2) * sin(deltaLat / 2) +
+          cos(lat1Rad) * cos(lat2Rad) * sin(deltaLon / 2) * sin(deltaLon / 2);
+
+      final c = 2 * atan2(sqrt(a), sqrt(1 - a));
+
+      final distance = earthRadius * c * converterFactor;
+
+      return distance;
     }
+  }
+
+  static double radians(double degrees) {
+    final double pi = 3.14159265358979323846;
+    return degrees * pi / 180.0;
   }
 }

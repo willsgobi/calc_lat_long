@@ -8,7 +8,7 @@ A package to calculate distance between two cordinate points Latitude and Longit
 
 ```yaml
 depencencies:
-  calc_lat_long: ^1.0.7
+  calc_lat_long: ^1.0.12
 ```
 
 ## Example

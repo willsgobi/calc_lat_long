@@ -21,7 +21,7 @@ environment:
   sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
-  calc_lat_long: any
+  calc_lat_long: 1.0.12
   flutter:
     sdk: flutter
 

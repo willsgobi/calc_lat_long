@@ -10,6 +10,6 @@ void main() {
         double.parse('-93.62959'),
         double.parse('-93.64298'),
         UnitLength.km);
-    expect(distance, 1.21);
+    expect(distance, 1.20);
   });
 }
